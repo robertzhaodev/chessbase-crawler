@@ -64,7 +64,7 @@ export class strUtil
 		return out;
 	};
 
-	// from SV String 
+	// from SV Strings
 	static mayBeUtf8 = function( str )
 	{
 		var bUtf8 = false; //  bAnsi = false;

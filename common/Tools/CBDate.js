@@ -31,7 +31,7 @@ export class CBDate
 
    toString ()
    {
-      return String.formatEx( "{day}.{month}.{year}", this );
+      return `${this.year}-${this.month}-${this.day}`;
    };
 
    static g_regexPGN = /(?:(\d{4})|\?{4})\.(?:(\d{2})|\?{2})\.(?:(\d{2})|\?{2})/;
@@ -187,7 +187,7 @@ export class CBDate
 
       //var format = Localization.getObject( DateFormats );
 
-      //return String.formatEx( format.short, { d: d, m: m, y: y } );
+      //return Strings.formatEx( format.short, { d: d, m: m, y: y } );
       alert( "notimpl" );
       return y + m + d;
    }

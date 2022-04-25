@@ -4,47 +4,54 @@
 
 // "use strict";
 
-import { Connector } from "../../WebClient/Connector.js";
-import { WebSockMessage } from "../../WebClient/Protocol/WebSockMessage.js";
-
-import { SockMsgId } from "../../WebClient/Protocol/WebSockMessage.js";
-import { DataBuffer } from "../../Container/DataBuffer.js";
-
+import { Connector } from "common/WebClient/Connector";
+import { Log } from "common/Tools/Log";
+import { Board } from "../Logic/Board";
+import { WebSockMessage } from "common/WebClient/Protocol/WebSockMessage";
+import { GameAutoCompleteRequest, GameAutoCompleteEnum } from "common/Chess/OnlineDB/GameAutoComplete"
+import { SockMsgId } from "common/WebClient/Protocol/WebSockMessage";
+import { DataBuffer } from "common/Container/DataBuffer";
+import { Game } from "../Logic/Game";
+import { OnlineEntryEnum, OnlineEntry } from "./OnlineEntry";
+import { Position } from "../Logic/Position";
+import { OnlineStatistics } from "common/Chess/OnlineDB/OnlineStatistics"
+import { GameAutoCompleteAnswer } from "./GameAutoComplete";
+import { ListenersUtil } from "common/Patterns/Listeners";
 import { LoginMode } from "common/WebClient/Protocol/LogonData";
 
 // NH2020I Diese Klasse ist dafür da, Anfragen an die OnlineDB zu senden und Antworten zu empfangen
 // Eine Suche nach einem Brett wird zum Beispiel über "search" begonnen.
 
 export var OnlineDBUserMsgId =
-{
-	NONE: 0,
+	{
+		NONE: 0,
 
-	REQUEST_AUTOCOMPLETE: 1350,
-	AUTOCOMPLETE: 1351,
+		REQUEST_AUTOCOMPLETE: 1350,
+		AUTOCOMPLETE: 1351,
 
-	//CREATETACTICSSESSION: 1352,
-	//FINISHTACTICSSESSION: 1353,
-	//REQUESTFIRSTPOS: 1354,
-	//TACTICSACTION: 1355,
-	//TACTICSPOSITION: 1356,
-	//TACTICSREPORT: 1357,
-	//RESTARTTACTICSSESSION: 1358,
-	//DAILYTACTICS: 1359,
-	//REQUESTTACTICSCOLLECTION: 1360,
-	//TACTICSCOLLECTION: 1361,
+		//CREATETACTICSSESSION: 1352,
+		//FINISHTACTICSSESSION: 1353,
+		//REQUESTFIRSTPOS: 1354,
+		//TACTICSACTION: 1355,
+		//TACTICSPOSITION: 1356,
+		//TACTICSREPORT: 1357,
+		//RESTARTTACTICSSESSION: 1358,
+		//DAILYTACTICS: 1359,
+		//REQUESTTACTICSCOLLECTION: 1360,
+		//TACTICSCOLLECTION: 1361,
 
 
-	toString:
-		function ( n )
-		{
-			for ( var attr in this )
+		toString:
+			function ( n )
 			{
-				if ( this[attr] == n )
-					return attr;
+				for ( var attr in this )
+				{
+					if ( this[attr] == n )
+						return attr;
+				}
+				return "Unknown OnlineDBUserMsgId: " + n;
 			}
-			return "Unknown OnlineDBUserMsgId: " + n;
-		}
-};
+	};
 
 export class OnlineLobby extends Connector
 {
@@ -53,7 +60,7 @@ export class OnlineLobby extends Connector
 	{
 		super();
 
-		this.initListeners();
+		OnlineLobby.InitListeners();
 
 		this.idGroup = 0;
 		this.gamesInitialLoad = 50;
@@ -62,7 +69,7 @@ export class OnlineLobby extends Connector
 
 		// NH2020 put these in constructor, removed OnlineLobby.prototype, added 'this.'
 		this.games = [];
-		// this.statboard = new Board();
+		this.statboard = new Board();
 		this.statside = 0;
 
 		// Added this and null
@@ -78,7 +85,13 @@ export class OnlineLobby extends Connector
 	onConnect ()
 	{
 		this.pingTimer.stop();
-		this.logonGuest();
+		if ( this.loginMode == LoginMode.GUEST )
+		{
+			this.logonGuest();
+		} else
+		{
+			this.logon();
+		}
 	};
 
 	// NH2020 Added
@@ -91,6 +104,11 @@ export class OnlineLobby extends Connector
 	hasSockCheckSum ()
 	{
 		return true;
+	};
+
+	testYesNo ( value )
+	{
+		Log.Log( "YesNo=" + value );
 	};
 
 	// NH2021 Create a completely new search
@@ -235,7 +253,7 @@ export class OnlineLobby extends Connector
 		}
 		catch ( x )
 		{
-			console.log(SockMsgId.toNumString( sockMsg.getType() ), x );
+			Log.Exception( SockMsgId.toNumString( sockMsg.getType() ), x );
 		}
 	};
 
@@ -347,7 +365,7 @@ export class OnlineLobby extends Connector
 				var aGame = new Game();
 				if ( this.readGame( aGame, aDB ) )
 				{
-					console.log('Missing')
+					Log.Missing();
 				}
 			}
 			aDB.endSizedRead();
@@ -362,6 +380,12 @@ export class OnlineLobby extends Connector
 				if ( nGameNo > 0 )
 				{
 					var game = new Game();
+					// NH2021I Über readGame wird Game.read2->initLine aufgerufen. Somit werden hier wohl
+					// alle Züge jedes geladenen Spiels direkt aufgerufen und die Notation etc. wird erstellt.
+					// Das dauert ein wenig. Eventuell kann man das für jedes Spiel einfach dann machen, wenn
+					// der Nutzer auf das Spiel klickt. Allerdings wird über readGame auch der Header etc. erstellt
+					// Man müsste das also sinnvoll machen: Read Game aufrufen und dann nur das initialisieren, was
+					// man auch braucht. Dann bei Click die Notation etc.
 					if ( this.readGame( game, aDB, nGameNo ) )
 					{
 						games.push(
@@ -420,7 +444,7 @@ export class OnlineLobby extends Connector
 			{
 				default:
 					// NH2020 UserMsgId from Playchess not defined in OnlineDB
-					console.log('Missing')
+					Log.Missing();
 					//Log.Log( "UserMsg=" + CB.UserMsgId.toString( sockMsg.getUserType() ) )
 					break;
 				case OnlineDBUserMsgId.AUTOCOMPLETE:
@@ -431,7 +455,7 @@ export class OnlineLobby extends Connector
 		catch ( x )
 		{
 			// NH2020 UserMsgId from Playchess not defined in OnlineDB
-			console.log('Missing')
+			Log.Missing();
 			//Log.Exception( CB.UserMsgId.toNumString( sockMsg.getUserType() ), x );
 		}
 	}
@@ -479,7 +503,7 @@ export class OnlineLobby extends Connector
 		}
 		catch( x )
 		{
-			console.log( "OL-LH:" + x );
+			Log.Exception( "OL-LH:" + x );
 		}
 		return false;
 	};
@@ -487,7 +511,7 @@ export class OnlineLobby extends Connector
 	handleChat ( sockMsg )
 	{
 		// NH2020 chat undefined
-		console.log('Missing')
+		Log.Missing();
 		//glApp.panelMgr.chatOut( chat.toString() );
 	};
 
@@ -495,35 +519,17 @@ export class OnlineLobby extends Connector
 	{
 	};
 
- 	initListeners() {
-		this.socket.addEventListener('Games', (games) => {
-			console.log(games)
-		})
-
-		conn.socket.addEventListener('Statistics', (games) => {
-			console.log(games)
-		})
-
-		conn.socket.addEventListener('NoGamesFound', (games) => {
-			console.log(games)
-		})
-
-		conn.socket.addEventListener('IDReceived', (games) => {
-			console.log(games)
-		})
-
-		conn.socket.addEventListener('ScrollSearch', (games) => {
-			console.log(games)
-		})
-        // if ( !OnlineLobby.prototype.fireEvent )
-        // {
-		// 	ListenersUtil.initForListeners( OnlineLobby );
-		// 	ListenersUtil.addEvent( OnlineLobby, "Statistics" );
-		// 	ListenersUtil.addEvent( OnlineLobby, "Games" );
-		// 	// NH2020 Added these Callbacks
-		// 	ListenersUtil.addEvent( OnlineLobby, "NoGamesFound" );
-		// 	ListenersUtil.addEvent( OnlineLobby, "IDReceived" );
-		// 	ListenersUtil.addEvent( OnlineLobby, "ScrollSearch")
-        // }
-    }
+	static InitListeners()
+	{
+		if ( !OnlineLobby.prototype.fireEvent )
+		{
+			ListenersUtil.initForListeners( OnlineLobby );
+			ListenersUtil.addEvent( OnlineLobby, "Statistics" );
+			ListenersUtil.addEvent( OnlineLobby, "Games" );
+			// NH2020 Added these Callbacks
+			ListenersUtil.addEvent( OnlineLobby, "NoGamesFound" );
+			ListenersUtil.addEvent( OnlineLobby, "IDReceived" );
+			ListenersUtil.addEvent( OnlineLobby, "ScrollSearch")
+		}
+	}
 }

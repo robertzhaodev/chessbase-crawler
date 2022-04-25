@@ -22,8 +22,6 @@ export class Connection {
         this.connectId = ConnectId.NONE;
 
         this.wsUri = uri;
-        this.onConnected = () => {}
-        this.onReceivedData = (msg) => {}
 
         this.error = false;
         this.msgCnt = 0;
@@ -58,13 +56,15 @@ export class Connection {
 
             this.socket.onmessage = (evt) => {
                 if (evt.data instanceof ArrayBuffer) {
-                    var msg = new WebSockMessage();
+                    const msg = new WebSockMessage();
                     try {
                         msg.fromReceiveBuf(evt.data);
                     } catch (x) {
                         console.log(x.toString());
                     }
+
                     this.onReceivedData(msg);
+
                 } else {
                     console.log(evt.data, "", "conn");
                     console.log( 'RESPONSE: ' + evt.data );
@@ -94,7 +94,7 @@ export class Connection {
 
     // NH2020 added "noCheck"
     sendMessage(sockMsg, noId, noCheck) {
-        console.log('Send message, type: ', sockMsg.type)
+        console.log('Send message, type: ', SockMsgId.toString(sockMsg.getType()));
         if (!this.socket)
             return;
 
@@ -120,11 +120,12 @@ export class Connection {
         if (sockMsg.getIdReceiver() === ConnectId.NONE)
             sockMsg.setIdReceiver(ConnectId.SERVER);
 
-        sockMsg.setIdSender(this.connectId);
+        if ( sockMsg.getIdSender() === 0 )
+            sockMsg.setIdSender( this.connectId );
 
         if (this.socket.readyState === SockState.CONNECTED) {
             this.socket.binaryType = "arraybuffer";
-            var arrBufSend = sockMsg.fillSendArrBuf(!noId, !noCheck);  // JS ArrayBuffer, not DataBuffer!
+            const arrBufSend = sockMsg.fillSendArrBuf(!noId, !noCheck);  // JS ArrayBuffer, not DataBuffer!
             this.socket.send(arrBufSend);
         }
 

@@ -3,6 +3,7 @@
   "email": "project@hostname.com",
   "type": "module",
   "dependencies": {
+    "fs": "0.0.1-security",
     "ws": "^8.5.0"
   }
 }

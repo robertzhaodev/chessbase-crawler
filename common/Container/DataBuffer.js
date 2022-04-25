@@ -164,7 +164,7 @@ export class DataBuffer
          this.nPos += nLen;
       }
       else
-         throw ( new Error( "Data Error: Read String" ) );
+         throw ( new Error( "Data Error: Read Strings" ) );
 
       return strUnicode;
    };
@@ -195,7 +195,7 @@ export class DataBuffer
          this.nPos += nLen;
       }
       else
-         throw ( new Error( String.f( "Data Error: Read String, Len={0}, maxLen={1}", nLen, nMaxLen ) ) );
+         throw ( new Error( String.f( "Data Error: Read Strings, Len={0}, maxLen={1}", nLen, nMaxLen ) ) );
 
       return strASCII;
    };
