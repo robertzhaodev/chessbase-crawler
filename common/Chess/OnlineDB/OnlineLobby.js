@@ -4,19 +4,12 @@
 
 // "use strict";
 
-import { Connector } from "common/WebClient/Connector";
-import { Log } from "common/Tools/Log";
-import { Board } from "../Logic/Board";
-import { WebSockMessage } from "common/WebClient/Protocol/WebSockMessage";
-import { GameAutoCompleteRequest, GameAutoCompleteEnum } from "common/Chess/OnlineDB/GameAutoComplete"
-import { SockMsgId } from "common/WebClient/Protocol/WebSockMessage";
-import { DataBuffer } from "common/Container/DataBuffer";
-import { Game } from "../Logic/Game";
-import { OnlineEntryEnum, OnlineEntry } from "./OnlineEntry";
-import { Position } from "../Logic/Position";
-import { OnlineStatistics } from "common/Chess/OnlineDB/OnlineStatistics"
-import { GameAutoCompleteAnswer } from "./GameAutoComplete";
-import { ListenersUtil } from "common/Patterns/Listeners";
+import { Connector } from "../../WebClient/Connector.js";
+import { WebSockMessage } from "../../WebClient/Protocol/WebSockMessage.js";
+
+import { SockMsgId } from "../../WebClient/Protocol/WebSockMessage.js";
+import { DataBuffer } from "../../Container/DataBuffer.js";
+
 import { LoginMode } from "common/WebClient/Protocol/LogonData";
 
 // NH2020I Diese Klasse ist dafür da, Anfragen an die OnlineDB zu senden und Antworten zu empfangen
@@ -60,7 +53,7 @@ export class OnlineLobby extends Connector
 	{
 		super();
 
-		OnlineLobby.InitListeners();
+		this.initListeners();
 
 		this.idGroup = 0;
 		this.gamesInitialLoad = 50;
@@ -69,7 +62,7 @@ export class OnlineLobby extends Connector
 
 		// NH2020 put these in constructor, removed OnlineLobby.prototype, added 'this.'
 		this.games = [];
-		this.statboard = new Board();
+		// this.statboard = new Board();
 		this.statside = 0;
 
 		// Added this and null
@@ -81,17 +74,11 @@ export class OnlineLobby extends Connector
 		this.maxGamesScrollLoad = 500;
 		this.gameSearchIndices = [];
 	};
-	
+
 	onConnect ()
 	{
 		this.pingTimer.stop();
-		if ( this.loginMode == LoginMode.GUEST )
-		{
-			this.logonGuest();
-		} else
-		{
-			this.logon();
-		}
+		this.logonGuest();
 	};
 
 	// NH2020 Added
@@ -104,11 +91,6 @@ export class OnlineLobby extends Connector
 	hasSockCheckSum ()
 	{
 		return true;
-	};
-
-	testYesNo ( value )
-	{
-		Log.Log( "YesNo=" + value );
 	};
 
 	// NH2021 Create a completely new search
@@ -253,7 +235,7 @@ export class OnlineLobby extends Connector
 		}
 		catch ( x )
 		{
-			Log.Exception( SockMsgId.toNumString( sockMsg.getType() ), x );
+			console.log(SockMsgId.toNumString( sockMsg.getType() ), x );
 		}
 	};
 
@@ -268,7 +250,7 @@ export class OnlineLobby extends Connector
 		//console.log("Handle OnlineDB Numbers: ", nGames, nTotalFound);
 
 		// If games have been found: Cycle and add them
-		// NH2021 Performance Check: Adding gameIndices for scrollSearch to gameSearchIndices array makes almost no time difference. 
+		// NH2021 Performance Check: Adding gameIndices for scrollSearch to gameSearchIndices array makes almost no time difference.
 		// Creating a new online Entry every time is significantly slower.
 		for ( var n = 0; n < nGames && n < this.maxGamesScrollLoad; n++ )
 		{
@@ -298,7 +280,7 @@ export class OnlineLobby extends Connector
 			this.fireOnNoGamesFound(); // NH2020 Added this Callback
 
 		//console.log("Received Indices: ", this.games);
-		
+
 		// NH2020 No Panel Manager anymore... Removed the rest
 	};
 
@@ -365,7 +347,7 @@ export class OnlineLobby extends Connector
 				var aGame = new Game();
 				if ( this.readGame( aGame, aDB ) )
 				{
-					Log.Missing();
+					console.log('Missing')
 				}
 			}
 			aDB.endSizedRead();
@@ -380,12 +362,6 @@ export class OnlineLobby extends Connector
 				if ( nGameNo > 0 )
 				{
 					var game = new Game();
-					// NH2021I Über readGame wird Game.read2->initLine aufgerufen. Somit werden hier wohl
-					// alle Züge jedes geladenen Spiels direkt aufgerufen und die Notation etc. wird erstellt.
-					// Das dauert ein wenig. Eventuell kann man das für jedes Spiel einfach dann machen, wenn
-					// der Nutzer auf das Spiel klickt. Allerdings wird über readGame auch der Header etc. erstellt
-					// Man müsste das also sinnvoll machen: Read Game aufrufen und dann nur das initialisieren, was
-					// man auch braucht. Dann bei Click die Notation etc.
 					if ( this.readGame( game, aDB, nGameNo ) )
 					{
 						games.push(
@@ -444,7 +420,7 @@ export class OnlineLobby extends Connector
 			{
 				default:
 					// NH2020 UserMsgId from Playchess not defined in OnlineDB
-					Log.Missing();
+					console.log('Missing')
 					//Log.Log( "UserMsg=" + CB.UserMsgId.toString( sockMsg.getUserType() ) )
 					break;
 				case OnlineDBUserMsgId.AUTOCOMPLETE:
@@ -455,7 +431,7 @@ export class OnlineLobby extends Connector
 		catch ( x )
 		{
 			// NH2020 UserMsgId from Playchess not defined in OnlineDB
-			Log.Missing();
+			console.log('Missing')
 			//Log.Exception( CB.UserMsgId.toNumString( sockMsg.getUserType() ), x );
 		}
 	}
@@ -503,7 +479,7 @@ export class OnlineLobby extends Connector
 		}
 		catch( x )
 		{
-			Log.Exception( "OL-LH:" + x );
+			console.log( "OL-LH:" + x );
 		}
 		return false;
 	};
@@ -511,7 +487,7 @@ export class OnlineLobby extends Connector
 	handleChat ( sockMsg )
 	{
 		// NH2020 chat undefined
-		Log.Missing();
+		console.log('Missing')
 		//glApp.panelMgr.chatOut( chat.toString() );
 	};
 
@@ -519,17 +495,35 @@ export class OnlineLobby extends Connector
 	{
 	};
 
-	static InitListeners()
-    {
-        if ( !OnlineLobby.prototype.fireEvent )
-        {
-			ListenersUtil.initForListeners( OnlineLobby );
-			ListenersUtil.addEvent( OnlineLobby, "Statistics" );
-			ListenersUtil.addEvent( OnlineLobby, "Games" );
-			// NH2020 Added these Callbacks
-			ListenersUtil.addEvent( OnlineLobby, "NoGamesFound" );
-			ListenersUtil.addEvent( OnlineLobby, "IDReceived" );
-			ListenersUtil.addEvent( OnlineLobby, "ScrollSearch")
-        }
+ 	initListeners() {
+		this.socket.addEventListener('Games', (games) => {
+			console.log(games)
+		})
+
+		conn.socket.addEventListener('Statistics', (games) => {
+			console.log(games)
+		})
+
+		conn.socket.addEventListener('NoGamesFound', (games) => {
+			console.log(games)
+		})
+
+		conn.socket.addEventListener('IDReceived', (games) => {
+			console.log(games)
+		})
+
+		conn.socket.addEventListener('ScrollSearch', (games) => {
+			console.log(games)
+		})
+        // if ( !OnlineLobby.prototype.fireEvent )
+        // {
+		// 	ListenersUtil.initForListeners( OnlineLobby );
+		// 	ListenersUtil.addEvent( OnlineLobby, "Statistics" );
+		// 	ListenersUtil.addEvent( OnlineLobby, "Games" );
+		// 	// NH2020 Added these Callbacks
+		// 	ListenersUtil.addEvent( OnlineLobby, "NoGamesFound" );
+		// 	ListenersUtil.addEvent( OnlineLobby, "IDReceived" );
+		// 	ListenersUtil.addEvent( OnlineLobby, "ScrollSearch")
+        // }
     }
 }

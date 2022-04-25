@@ -2,7 +2,7 @@
 // ES6 5.3.2020
 
 import WebSocket from 'ws';
-import {WebSockMessage} from "./Protocol/WebSockMessage.js";
+import {SockMsgId, WebSockMessage} from "./Protocol/WebSockMessage.js";
 
 export var ConnectId = {
     NONE: 0,
@@ -22,6 +22,8 @@ export class Connection {
         this.connectId = ConnectId.NONE;
 
         this.wsUri = uri;
+        this.onConnected = () => {}
+        this.onReceivedData = (msg) => {}
 
         this.error = false;
         this.msgCnt = 0;
@@ -33,25 +35,28 @@ export class Connection {
                 this.socket.close();
 
             console.log("Start Open Web Socket Uri: " + this.wsUri);
-            this.socket = new WebSocket(this.wsUri);
+            this.socket = new WebSocket(this.wsUri, [], {
+                headers: {
+                    "Origin": "https://database.chessbase.com"
+                }
+            });
 
-            var conn = this;
             this.error = false;
 
-            this.socket.onopen = function () {
+            this.socket.onopen = () => {
                 console.log('Socket connected!')
-                console.log(this.socket);
+                this.onConnected()
             };
 
-            this.socket.onclose = function (ev) {
-                console.log("Close Connection: " + conn.wsUri + " " + ev.code);
+            this.socket.onclose = (ev) => {
+                console.log("Close Connection: " + this.wsUri + " " + ev.code);
             };
 
-            this.socket.onerror = function (error) {
-                console.log("Error: " + conn.wsUri + " " + error);
+            this.socket.onerror = (error) => {
+                console.log("Error: " + this.wsUri + " " + error);
             };
 
-            this.socket.onmessage = function (evt) {
+            this.socket.onmessage = (evt) => {
                 if (evt.data instanceof ArrayBuffer) {
                     var msg = new WebSockMessage();
                     try {
@@ -59,11 +64,11 @@ export class Connection {
                     } catch (x) {
                         console.log(x.toString());
                     }
+                    this.onReceivedData(msg);
                 } else {
                     console.log(evt.data, "", "conn");
                     console.log( 'RESPONSE: ' + evt.data );
                 }
-                conn.reconnectTries = 0;
             };
 
         } catch (x) {
@@ -89,6 +94,7 @@ export class Connection {
 
     // NH2020 added "noCheck"
     sendMessage(sockMsg, noId, noCheck) {
+        console.log('Send message, type: ', sockMsg.type)
         if (!this.socket)
             return;
 
@@ -113,7 +119,9 @@ export class Connection {
 
         if (sockMsg.getIdReceiver() === ConnectId.NONE)
             sockMsg.setIdReceiver(ConnectId.SERVER);
+
         sockMsg.setIdSender(this.connectId);
+
         if (this.socket.readyState === SockState.CONNECTED) {
             this.socket.binaryType = "arraybuffer";
             var arrBufSend = sockMsg.fillSendArrBuf(!noId, !noCheck);  // JS ArrayBuffer, not DataBuffer!

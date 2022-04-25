@@ -17,7 +17,7 @@ import { lm } from "common/Resources/Localization/Localization";
 // import { glApp  } from "common/App/App";
 import { System } from "common/Tools/System";
 import { LogonData } from "common/WebClient/Protocol/LogonData"
-import { Log } from "common/Tools/Log"
+
 import { WebSockMessage, SockMsgId } from "common/WebClient/Protocol/WebSockMessage"
 import { ConnectId } from "common/WebClient/Connection";
 import { clientParams } from 'index'
@@ -86,7 +86,7 @@ export class Connector
 
 		//	CB.DOM.setEncode64Cookie( "AccountName64", user );
 		if ( mode != LoginMode.GUEST )
-			DOM.setAccountNameCookie( user );
+			// DOM.setAccountNameCookie( user );
 
 		this.periodicPingTimer = new Timer( this.periodicPingHandler.bind( this ) );
 	};
