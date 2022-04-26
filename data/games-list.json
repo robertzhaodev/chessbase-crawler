@@ -6,12 +6,12 @@
 		"subRound": 2,
 		"board": 0,
 		"eco": "C28",
-		"date": "2022-4-17",
-		"result": 2,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2785,
-		"elob": 2781,
-		"plyCount": 53
+		"eloWhite": 2785,
+		"eloBlack": 2781,
+		"playCount": 53
 	},
 	{
 		"black": "Levon Aronian",
@@ -20,12 +20,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "A16",
-		"date": "2022-4-17",
-		"result": 1,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2781,
-		"elob": 2785,
-		"plyCount": 65
+		"eloWhite": 2781,
+		"eloBlack": 2785,
+		"playCount": 65
 	},
 	{
 		"black": "Levon Aronian",
@@ -34,12 +34,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D27",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2781,
-		"elob": 2785,
-		"plyCount": 63
+		"eloWhite": 2781,
+		"eloBlack": 2785,
+		"playCount": 63
 	},
 	{
 		"black": "Wesley So",
@@ -48,12 +48,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2781,
-		"elob": 2778,
-		"plyCount": 14
+		"eloWhite": 2781,
+		"eloBlack": 2778,
+		"playCount": 14
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -62,12 +62,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C24",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2785,
-		"elob": 2750,
-		"plyCount": 46
+		"eloWhite": 2785,
+		"eloBlack": 2750,
+		"playCount": 46
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -76,12 +76,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2781,
-		"elob": 2750,
-		"plyCount": 14
+		"eloWhite": 2781,
+		"eloBlack": 2750,
+		"playCount": 14
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -90,12 +90,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D38",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2750,
-		"elob": 2781,
-		"plyCount": 51
+		"eloWhite": 2750,
+		"eloBlack": 2781,
+		"playCount": 51
 	},
 	{
 		"black": "Anish Giri",
@@ -104,12 +104,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2750,
-		"elob": 2773,
-		"plyCount": 14
+		"eloWhite": 2750,
+		"eloBlack": 2773,
+		"playCount": 14
 	},
 	{
 		"black": "Levon Aronian",
@@ -118,12 +118,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "D39",
-		"date": "2022-4-17",
-		"result": 0,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2742,
-		"elob": 2785,
-		"plyCount": 54
+		"eloWhite": 2742,
+		"eloBlack": 2785,
+		"playCount": 54
 	},
 	{
 		"black": "Levon Aronian",
@@ -132,12 +132,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D27",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2742,
-		"elob": 2785,
-		"plyCount": 62
+		"eloWhite": 2742,
+		"eloBlack": 2785,
+		"playCount": 62
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -146,12 +146,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E24",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2742,
-		"elob": 2781,
-		"plyCount": 36
+		"eloWhite": 2742,
+		"eloBlack": 2781,
+		"playCount": 36
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -160,12 +160,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C11",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2778,
-		"elob": 2742,
-		"plyCount": 30
+		"eloWhite": 2778,
+		"eloBlack": 2742,
+		"playCount": 30
 	},
 	{
 		"black": "Liren Ding",
@@ -174,12 +174,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D46",
-		"date": "2022-4-5",
-		"result": 1,
+		"date": "2022-04-04T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Hangzhou m",
-		"elow": 2729,
-		"elob": 2799,
-		"plyCount": 37
+		"eloWhite": 2729,
+		"eloBlack": 2799,
+		"playCount": 37
 	},
 	{
 		"black": "Liren Ding",
@@ -188,12 +188,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D61",
-		"date": "2022-4-7",
-		"result": 1,
+		"date": "2022-04-06T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Hangzhou m",
-		"elow": 2729,
-		"elob": 2799,
-		"plyCount": 41
+		"eloWhite": 2729,
+		"eloBlack": 2799,
+		"playCount": 41
 	},
 	{
 		"black": "Yi Wei",
@@ -202,12 +202,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-6",
-		"result": 1,
+		"date": "2022-04-05T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Hangzhou m",
-		"elow": 2799,
-		"elob": 2729,
-		"plyCount": 41
+		"eloWhite": 2799,
+		"eloBlack": 2729,
+		"playCount": 41
 	},
 	{
 		"black": "Yi Wei",
@@ -216,12 +216,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-10",
-		"result": 2,
+		"date": "2022-04-09T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Hangzhou m",
-		"elow": 2799,
-		"elob": 2729,
-		"plyCount": 41
+		"eloWhite": 2799,
+		"eloBlack": 2729,
+		"playCount": 41
 	},
 	{
 		"black": "Liren Ding",
@@ -230,12 +230,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E15",
-		"date": "2022-4-9",
-		"result": 1,
+		"date": "2022-04-08T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Hangzhou m",
-		"elow": 2729,
-		"elob": 2799,
-		"plyCount": 34
+		"eloWhite": 2729,
+		"eloBlack": 2799,
+		"playCount": 34
 	},
 	{
 		"black": "Yi Wei",
@@ -244,12 +244,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-8",
-		"result": 1,
+		"date": "2022-04-07T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Hangzhou m",
-		"elow": 2799,
-		"elob": 2729,
-		"plyCount": 30
+		"eloWhite": 2799,
+		"eloBlack": 2729,
+		"playCount": 30
 	},
 	{
 		"black": "Levon Aronian",
@@ -258,12 +258,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D27",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2729,
-		"elob": 2785,
-		"plyCount": 13
+		"eloWhite": 2729,
+		"eloBlack": 2785,
+		"playCount": 13
 	},
 	{
 		"black": "Levon Aronian",
@@ -272,12 +272,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "E46",
-		"date": "2022-4-17",
-		"result": 0,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2729,
-		"elob": 2785,
-		"plyCount": 36
+		"eloWhite": 2729,
+		"eloBlack": 2785,
+		"playCount": 36
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -286,12 +286,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D37",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2781,
-		"elob": 2729,
-		"plyCount": 43
+		"eloWhite": 2781,
+		"eloBlack": 2729,
+		"playCount": 43
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -300,12 +300,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D32",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2778,
-		"elob": 2729,
-		"plyCount": 29
+		"eloWhite": 2778,
+		"eloBlack": 2729,
+		"playCount": 29
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -314,12 +314,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "C65",
-		"date": "2022-4-17",
-		"result": 0,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2750,
-		"elob": 2742,
-		"plyCount": 65
+		"eloWhite": 2750,
+		"eloBlack": 2742,
+		"playCount": 65
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -328,12 +328,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2742,
-		"elob": 2750,
-		"plyCount": 14
+		"eloWhite": 2742,
+		"eloBlack": 2750,
+		"playCount": 14
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -342,12 +342,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B54",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2773,
-		"elob": 2729,
-		"plyCount": 16
+		"eloWhite": 2773,
+		"eloBlack": 2729,
+		"playCount": 16
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -356,12 +356,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D37",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2723,
-		"elob": 2781,
-		"plyCount": 12
+		"eloWhite": 2723,
+		"eloBlack": 2781,
+		"playCount": 12
 	},
 	{
 		"black": "Santosh Gujrathi Vidit",
@@ -370,12 +370,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C42",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2773,
-		"elob": 2723,
-		"plyCount": 50
+		"eloWhite": 2773,
+		"eloBlack": 2723,
+		"playCount": 50
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -384,12 +384,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A05",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2750,
-		"elob": 2729,
-		"plyCount": 60
+		"eloWhite": 2750,
+		"eloBlack": 2729,
+		"playCount": 60
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -398,12 +398,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A06",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2750,
-		"elob": 2729,
-		"plyCount": 71
+		"eloWhite": 2750,
+		"eloBlack": 2729,
+		"playCount": 71
 	},
 	{
 		"black": "Daniil Dubov",
@@ -412,12 +412,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D12",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2781,
-		"elob": 2711,
-		"plyCount": 52
+		"eloWhite": 2781,
+		"eloBlack": 2711,
+		"playCount": 52
 	},
 	{
 		"black": "Andrey Esipenko",
@@ -426,12 +426,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A13",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2750,
-		"elob": 2723,
-		"plyCount": 46
+		"eloWhite": 2750,
+		"eloBlack": 2723,
+		"playCount": 46
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -440,12 +440,12 @@
 		"subRound": 4,
 		"board": 0,
 		"eco": "E11",
-		"date": "2022-4-17",
-		"result": 0,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2723,
-		"elob": 2742,
-		"plyCount": 34
+		"eloWhite": 2723,
+		"eloBlack": 2742,
+		"playCount": 34
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -454,12 +454,12 @@
 		"subRound": 2,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-17",
-		"result": 1,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2723,
-		"elob": 2742,
-		"plyCount": 58
+		"eloWhite": 2723,
+		"eloBlack": 2742,
+		"playCount": 58
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -468,12 +468,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A40",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2723,
-		"elob": 2742,
-		"plyCount": 26
+		"eloWhite": 2723,
+		"eloBlack": 2742,
+		"playCount": 26
 	},
 	{
 		"black": "Santosh Gujrathi Vidit",
@@ -482,12 +482,12 @@
 		"subRound": 3,
 		"board": 0,
 		"eco": "A08",
-		"date": "2022-4-17",
-		"result": 1,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2742,
-		"elob": 2723,
-		"plyCount": 80
+		"eloWhite": 2742,
+		"eloBlack": 2723,
+		"playCount": 80
 	},
 	{
 		"black": "Santosh Gujrathi Vidit",
@@ -496,12 +496,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "C47",
-		"date": "2022-4-17",
-		"result": 1,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2742,
-		"elob": 2723,
-		"plyCount": 39
+		"eloWhite": 2742,
+		"eloBlack": 2723,
+		"playCount": 39
 	},
 	{
 		"black": "Shakhriyar Mamedyarov",
@@ -510,12 +510,12 @@
 		"subRound": 8,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-10",
-		"result": 1,
+		"date": "2022-04-09T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Bundesliga 2122",
-		"elow": 2701,
-		"elob": 2776,
-		"plyCount": 30
+		"eloWhite": 2701,
+		"eloBlack": 2776,
+		"playCount": 30
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -524,12 +524,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B85",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2698,
-		"elob": 2781,
-		"plyCount": 38
+		"eloWhite": 2698,
+		"eloBlack": 2781,
+		"playCount": 38
 	},
 	{
 		"black": "Anish Giri",
@@ -538,12 +538,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D00",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2701,
-		"elob": 2773,
-		"plyCount": 79
+		"eloWhite": 2701,
+		"eloBlack": 2773,
+		"playCount": 79
 	},
 	{
 		"black": "Sanan Sjugirov",
@@ -552,12 +552,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D02",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2781,
-		"elob": 2696,
-		"plyCount": 66
+		"eloWhite": 2781,
+		"eloBlack": 2696,
+		"playCount": 66
 	},
 	{
 		"black": "Samuel Sevian",
@@ -566,12 +566,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B70",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2785,
-		"elob": 2693,
-		"plyCount": 72
+		"eloWhite": 2785,
+		"eloBlack": 2693,
+		"playCount": 72
 	},
 	{
 		"black": "Wesley So",
@@ -580,12 +580,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D30",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2693,
-		"elob": 2778,
-		"plyCount": 43
+		"eloWhite": 2693,
+		"eloBlack": 2778,
+		"playCount": 43
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -594,12 +594,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2711,
-		"elob": 2742,
-		"plyCount": 66
+		"eloWhite": 2711,
+		"eloBlack": 2742,
+		"playCount": 66
 	},
 	{
 		"black": "Jeffery Xiong",
@@ -608,12 +608,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B51",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2785,
-		"elob": 2685,
-		"plyCount": 34
+		"eloWhite": 2785,
+		"eloBlack": 2685,
+		"playCount": 34
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -622,12 +622,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C54",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2685,
-		"elob": 2781,
-		"plyCount": 35
+		"eloWhite": 2685,
+		"eloBlack": 2781,
+		"playCount": 35
 	},
 	{
 		"black": "Santosh Gujrathi Vidit",
@@ -636,12 +636,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C47",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2711,
-		"elob": 2723,
-		"plyCount": 39
+		"eloWhite": 2711,
+		"eloBlack": 2723,
+		"playCount": 39
 	},
 	{
 		"black": "Sanan Sjugirov",
@@ -650,12 +650,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A06",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2750,
-		"elob": 2696,
-		"plyCount": 40
+		"eloWhite": 2750,
+		"eloBlack": 2696,
+		"playCount": 40
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -664,12 +664,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2693,
-		"elob": 2750,
-		"plyCount": 39
+		"eloWhite": 2693,
+		"eloBlack": 2750,
+		"playCount": 39
 	},
 	{
 		"black": "Levon Aronian",
@@ -678,12 +678,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A07",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2674,
-		"elob": 2785,
-		"plyCount": 53
+		"eloWhite": 2674,
+		"eloBlack": 2785,
+		"playCount": 53
 	},
 	{
 		"black": "Sanan Sjugirov",
@@ -692,12 +692,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D36",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2742,
-		"elob": 2696,
-		"plyCount": 58
+		"eloWhite": 2742,
+		"eloBlack": 2696,
+		"playCount": 58
 	},
 	{
 		"black": "Vladimir1 Fedoseev",
@@ -706,12 +706,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D85",
-		"date": "2022-4-5",
-		"result": 1,
+		"date": "2022-04-04T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Titled Tuesday intern op 05th Apr Early",
-		"elow": 2729,
-		"elob": 2701,
-		"plyCount": 30
+		"eloWhite": 2729,
+		"eloBlack": 2701,
+		"playCount": 30
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -720,12 +720,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C77",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2674,
-		"elob": 2781,
-		"plyCount": 47
+		"eloWhite": 2674,
+		"eloBlack": 2781,
+		"playCount": 47
 	},
 	{
 		"black": "Fabiano Caruana",
@@ -734,12 +734,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B22",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2674,
-		"elob": 2781,
-		"plyCount": 39
+		"eloWhite": 2674,
+		"eloBlack": 2781,
+		"playCount": 39
 	},
 	{
 		"black": "Jeffery Xiong",
@@ -748,12 +748,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "A13",
-		"date": "2022-4-17",
-		"result": 2,
+		"date": "2022-04-16T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 KO",
-		"elow": 2750,
-		"elob": 2685,
-		"plyCount": 39
+		"eloWhite": 2750,
+		"eloBlack": 2685,
+		"playCount": 39
 	},
 	{
 		"black": "Jeffery Xiong",
@@ -762,12 +762,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B53",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2750,
-		"elob": 2685,
-		"plyCount": 53
+		"eloWhite": 2750,
+		"eloBlack": 2685,
+		"playCount": 53
 	},
 	{
 		"black": "Parham Maghsoodloo",
@@ -776,12 +776,12 @@
 		"subRound": 7,
 		"board": 0,
 		"eco": "B53",
-		"date": "2022-4-9",
-		"result": 0,
+		"date": "2022-04-08T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Bundesliga 2122",
-		"elow": 2716,
-		"elob": 2701,
-		"plyCount": 35
+		"eloWhite": 2716,
+		"eloBlack": 2701,
+		"playCount": 35
 	},
 	{
 		"black": "Daniil Dubov",
@@ -790,12 +790,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A06",
-		"date": "2022-4-5",
-		"result": 2,
+		"date": "2022-04-04T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 05th Apr Early",
-		"elow": 2701,
-		"elob": 2711,
-		"plyCount": 32
+		"eloWhite": 2701,
+		"eloBlack": 2711,
+		"playCount": 32
 	},
 	{
 		"black": "Daniil Dubov",
@@ -804,12 +804,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B43",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2698,
-		"elob": 2711,
-		"plyCount": 46
+		"eloWhite": 2698,
+		"eloBlack": 2711,
+		"playCount": 46
 	},
 	{
 		"black": "Daniil Dubov",
@@ -818,12 +818,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B42",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2696,
-		"elob": 2711,
-		"plyCount": 34
+		"eloWhite": 2696,
+		"eloBlack": 2711,
+		"playCount": 34
 	},
 	{
 		"black": "Nodirbek Abdusattorov",
@@ -832,12 +832,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D35",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2778,
-		"elob": 2661,
-		"plyCount": 31
+		"eloWhite": 2778,
+		"eloBlack": 2661,
+		"playCount": 31
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -846,12 +846,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B12",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2674,
-		"elob": 2750,
-		"plyCount": 42
+		"eloWhite": 2674,
+		"eloBlack": 2750,
+		"playCount": 42
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -860,12 +860,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "B22",
-		"date": "2022-4-3",
-		"result": 2,
+		"date": "2022-04-02T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk8 KO",
-		"elow": 2685,
-		"elob": 2729,
-		"plyCount": 49
+		"eloWhite": 2685,
+		"eloBlack": 2729,
+		"playCount": 49
 	},
 	{
 		"black": "Nils Grandelius",
@@ -874,12 +874,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B50",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2785,
-		"elob": 2656,
-		"plyCount": 38
+		"eloWhite": 2785,
+		"eloBlack": 2656,
+		"playCount": 38
 	},
 	{
 		"black": "Ian Nepomniachtchi",
@@ -888,12 +888,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A81",
-		"date": "2022-4-5",
-		"result": 1,
+		"date": "2022-04-04T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Titled Tuesday intern op 05th Apr Late",
-		"elow": 2661,
-		"elob": 2773,
-		"plyCount": 60
+		"eloWhite": 2661,
+		"eloBlack": 2773,
+		"playCount": 60
 	},
 	{
 		"black": "Wesley So",
@@ -902,12 +902,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E05",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2656,
-		"elob": 2778,
-		"plyCount": 54
+		"eloWhite": 2656,
+		"eloBlack": 2778,
+		"playCount": 54
 	},
 	{
 		"black": "Grigoriy Oparin",
@@ -916,12 +916,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E28",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2742,
-		"elob": 2674,
-		"plyCount": 45
+		"eloWhite": 2742,
+		"eloBlack": 2674,
+		"playCount": 45
 	},
 	{
 		"black": "Anish Giri",
@@ -930,12 +930,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A07",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2656,
-		"elob": 2773,
-		"plyCount": 77
+		"eloWhite": 2656,
+		"eloBlack": 2773,
+		"playCount": 77
 	},
 	{
 		"black": "Kirill Alekseenko",
@@ -944,12 +944,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C75",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2693,
-		"elob": 2698,
-		"plyCount": 45
+		"eloWhite": 2693,
+		"eloBlack": 2698,
+		"playCount": 45
 	},
 	{
 		"black": "Aryan Tari",
@@ -958,12 +958,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D40",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2781,
-		"elob": 2650,
-		"plyCount": 31
+		"eloWhite": 2781,
+		"eloBlack": 2650,
+		"playCount": 31
 	},
 	{
 		"black": "Aryan Tari",
@@ -972,12 +972,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B12",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2781,
-		"elob": 2650,
-		"plyCount": 48
+		"eloWhite": 2781,
+		"eloBlack": 2650,
+		"playCount": 48
 	},
 	{
 		"black": "Daniil Dubov",
@@ -986,12 +986,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "D90",
-		"date": "2022-4-3",
-		"result": 2,
+		"date": "2022-04-02T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk8 KO",
-		"elow": 2685,
-		"elob": 2711,
-		"plyCount": 32
+		"eloWhite": 2685,
+		"eloBlack": 2711,
+		"playCount": 32
 	},
 	{
 		"black": "Rasmus Svane",
@@ -1000,12 +1000,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E28",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2781,
-		"elob": 2648,
-		"plyCount": 21
+		"eloWhite": 2781,
+		"eloBlack": 2648,
+		"playCount": 21
 	},
 	{
 		"black": "Santosh Gujrathi Vidit",
@@ -1014,12 +1014,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E36",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2675,
-		"elob": 2723,
-		"plyCount": 78
+		"eloWhite": 2675,
+		"eloBlack": 2723,
+		"playCount": 78
 	},
 	{
 		"black": "Anish Giri",
@@ -1028,12 +1028,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B23",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2650,
-		"elob": 2773,
-		"plyCount": 40
+		"eloWhite": 2650,
+		"eloBlack": 2773,
+		"playCount": 40
 	},
 	{
 		"black": "Nodirbek Abdusattorov",
@@ -1042,12 +1042,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "B27",
-		"date": "2022-4-3",
-		"result": 0,
+		"date": "2022-04-02T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk8 KO",
-		"elow": 2750,
-		"elob": 2661,
-		"plyCount": 51
+		"eloWhite": 2750,
+		"eloBlack": 2661,
+		"playCount": 51
 	},
 	{
 		"black": "Andrey Esipenko",
@@ -1056,12 +1056,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D55",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2674,
-		"elob": 2723,
-		"plyCount": 59
+		"eloWhite": 2674,
+		"eloBlack": 2723,
+		"playCount": 59
 	},
 	{
 		"black": "Maxim Matlakov",
@@ -1070,12 +1070,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D38",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2723,
-		"elob": 2674,
-		"plyCount": 46
+		"eloWhite": 2723,
+		"eloBlack": 2674,
+		"playCount": 46
 	},
 	{
 		"black": "Nodirbek Abdusattorov",
@@ -1084,12 +1084,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D94",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2750,
-		"elob": 2661,
-		"plyCount": 43
+		"eloWhite": 2750,
+		"eloBlack": 2661,
+		"playCount": 43
 	},
 	{
 		"black": "Jaime Santos Latasa",
@@ -1098,12 +1098,12 @@
 		"subRound": 8,
 		"board": 0,
 		"eco": "D38",
-		"date": "2022-4-9",
-		"result": 2,
+		"date": "2022-04-08T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Bundesliga 2122",
-		"elow": 2776,
-		"elob": 2648,
-		"plyCount": 50
+		"eloWhite": 2776,
+		"eloBlack": 2648,
+		"playCount": 50
 	},
 	{
 		"black": "Kirill Alekseenko",
@@ -1112,12 +1112,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C47",
-		"date": "2022-4-12",
-		"result": 1,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2685,
-		"elob": 2698,
-		"plyCount": 38
+		"eloWhite": 2685,
+		"eloBlack": 2698,
+		"playCount": 38
 	},
 	{
 		"black": "Jeffery Xiong",
@@ -1126,12 +1126,12 @@
 		"subRound": 1,
 		"board": 0,
 		"eco": "E60",
-		"date": "2022-4-3",
-		"result": 2,
+		"date": "2022-04-02T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk8 KO",
-		"elow": 2699,
-		"elob": 2685,
-		"plyCount": 50
+		"eloWhite": 2699,
+		"eloBlack": 2685,
+		"playCount": 50
 	},
 	{
 		"black": "Alexander Grischuk",
@@ -1140,12 +1140,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D02",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2661,
-		"elob": 2742,
-		"plyCount": 23
+		"eloWhite": 2661,
+		"eloBlack": 2742,
+		"playCount": 23
 	},
 	{
 		"black": "Samuel Sevian",
@@ -1154,12 +1154,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B10",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2685,
-		"elob": 2693,
-		"plyCount": 65
+		"eloWhite": 2685,
+		"eloBlack": 2693,
+		"playCount": 65
 	},
 	{
 		"black": "Daniil Dubov",
@@ -1168,12 +1168,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C02",
-		"date": "2022-4-12",
-		"result": 1,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2674,
-		"elob": 2711,
-		"plyCount": 42
+		"eloWhite": 2674,
+		"eloBlack": 2711,
+		"playCount": 42
 	},
 	{
 		"black": "Daniil Dubov",
@@ -1182,12 +1182,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B43",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2674,
-		"elob": 2711,
-		"plyCount": 24
+		"eloWhite": 2674,
+		"eloBlack": 2711,
+		"playCount": 24
 	},
 	{
 		"black": "Narayanan Sunilduth Lyna",
@@ -1196,12 +1196,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D11",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2729,
-		"elob": 2662,
-		"plyCount": 33
+		"eloWhite": 2729,
+		"eloBlack": 2662,
+		"playCount": 33
 	},
 	{
 		"black": "Matthias Bluebaum",
@@ -1210,12 +1210,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D35",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2778,
-		"elob": 2637,
-		"plyCount": 49
+		"eloWhite": 2778,
+		"eloBlack": 2637,
+		"playCount": 49
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -1224,12 +1224,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "C67",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2650,
-		"elob": 2750,
-		"plyCount": 54
+		"eloWhite": 2650,
+		"eloBlack": 2750,
+		"playCount": 54
 	},
 	{
 		"black": "Grigoriy Oparin",
@@ -1238,12 +1238,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B62",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2701,
-		"elob": 2674,
-		"plyCount": 49
+		"eloWhite": 2701,
+		"eloBlack": 2674,
+		"playCount": 49
 	},
 	{
 		"black": "Dmitry Andreikin",
@@ -1252,12 +1252,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A57",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2661,
-		"elob": 2729,
-		"plyCount": 94
+		"eloWhite": 2661,
+		"eloBlack": 2729,
+		"playCount": 94
 	},
 	{
 		"black": "Anish Giri",
@@ -1266,12 +1266,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D15",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2637,
-		"elob": 2773,
-		"plyCount": 40
+		"eloWhite": 2637,
+		"eloBlack": 2773,
+		"playCount": 40
 	},
 	{
 		"black": "Wesley So",
@@ -1280,12 +1280,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E32",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2635,
-		"elob": 2778,
-		"plyCount": 87
+		"eloWhite": 2635,
+		"eloBlack": 2778,
+		"playCount": 87
 	},
 	{
 		"black": "Hikaru Nakamura",
@@ -1294,12 +1294,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A80",
-		"date": "2022-4-12",
-		"result": 2,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Titled Tuesday intern op 12th Apr Late",
-		"elow": 2649,
-		"elob": 2750,
-		"plyCount": 102
+		"eloWhite": 2649,
+		"eloBlack": 2750,
+		"playCount": 102
 	},
 	{
 		"black": "Alexey Sarana",
@@ -1308,12 +1308,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E07",
-		"date": "2022-4-12",
-		"result": 0,
+		"date": "2022-04-11T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Titled Tuesday intern op 12th Apr Early",
-		"elow": 2696,
-		"elob": 2675,
-		"plyCount": 33
+		"eloWhite": 2696,
+		"eloBlack": 2675,
+		"playCount": 33
 	},
 	{
 		"black": "Alexey Sarana",
@@ -1322,12 +1322,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B31",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2698,
-		"elob": 2675,
-		"plyCount": 65
+		"eloWhite": 2698,
+		"eloBlack": 2675,
+		"playCount": 65
 	},
 	{
 		"black": "Alexey Sarana",
@@ -1336,12 +1336,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E11",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2693,
-		"elob": 2675,
-		"plyCount": 61
+		"eloWhite": 2693,
+		"eloBlack": 2675,
+		"playCount": 61
 	},
 	{
 		"black": "Igor Kovalenko",
@@ -1350,12 +1350,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "A38",
-		"date": "2022-4-16",
-		"result": 0,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "0 – 1",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2695,
-		"elob": 2674,
-		"plyCount": 52
+		"eloWhite": 2695,
+		"eloBlack": 2674,
+		"playCount": 52
 	},
 	{
 		"black": "Gata Kamsky",
@@ -1364,12 +1364,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "D10",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2723,
-		"elob": 2661,
-		"plyCount": 57
+		"eloWhite": 2723,
+		"eloBlack": 2661,
+		"playCount": 57
 	},
 	{
 		"black": "Nodirbek Abdusattorov",
@@ -1378,12 +1378,12 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "E11",
-		"date": "2022-4-16",
-		"result": 2,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "1 – 0",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2723,
-		"elob": 2661,
-		"plyCount": 39
+		"eloWhite": 2723,
+		"eloBlack": 2661,
+		"playCount": 39
 	},
 	{
 		"black": "Ivan Saric",
@@ -1392,11 +1392,11 @@
 		"subRound": 0,
 		"board": 0,
 		"eco": "B40",
-		"date": "2022-4-16",
-		"result": 1,
+		"date": "2022-04-15T17:00:00.000Z",
+		"result": "½–½",
 		"event": "Chess.com Rapid Wk10 Swiss",
-		"elow": 2674,
-		"elob": 2695,
-		"plyCount": 74
+		"eloWhite": 2674,
+		"eloBlack": 2695,
+		"playCount": 74
 	}
 ]

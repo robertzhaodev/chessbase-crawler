@@ -3,19 +3,18 @@ import {LoginMode, LogonData} from "../common/WebClient/Protocol/LogonData.js";
 import {CBGuid} from "../common/Tools/CBGuid.js";
 import {SockMsgId, WebSockMessage} from "../common/WebClient/Protocol/WebSockMessage.js";
 import {YourIdData} from "../common/WebClient/Protocol/YourId.js";
-import {GameHeader} from "../common/Chess/Logic/GameHeader.js";
+import {GameHeader, GameResultEnum} from "../common/Chess/Logic/GameHeader.js";
 import fs from 'fs';
 import path from "path"
 
 export class GamesCrawler extends Connection {
 
     static start(uri) {
-        return new GamesCrawler(uri);
+        return new GamesCrawler(uri).open();
     }
 
     constructor(uri) {
         super(uri);
-        this.open();
     }
 
     /**
@@ -180,12 +179,12 @@ export class GamesCrawler extends Connection {
                 subRound: g.subRound,
                 board: g.board,
                 eco: g.eco,
-                date: g.date.toString(),
-                result: g.result,
+                date: new Date(g.date.toString()),
+                result: GameResultEnum.toString(g.result),
                 event: g.event.event,
-                elow: g.eloWh,
-                elob: g.eloBl,
-                plyCount: g.plyCount,
+                eloWhite: g.eloWh,
+                eloBlack: g.eloBl,
+                playCount: g.plyCount,
                 flags: g.flags
             };
         });
