@@ -1,3 +1,5 @@
+import {getMoveLabel, ECOtoString, Square} from "./ultils.js";
+
 /**
  * Read game headers
  * @param _buf
@@ -208,7 +210,9 @@ function readMoves(_buf) {
                 if ((from & 0xC0) === 0x40) {
                     prom = 2 /* Piece.QUEEN */ + (to >> 6);
                 }
-                moves.push({from, to, prom});
+
+                const m = {from: Square.toString(from), to: Square.toString(to), prom}
+                moves.push(m);
             }
         }
 
@@ -216,43 +220,4 @@ function readMoves(_buf) {
     }
 
     return [];
-}
-
-/**
- * ECO code to ECO String
- * @param nClass
- * @returns {string}
- * @constructor
- */
-function ECOtoString( nClass )
-{
-    var i;
-    var pClass = "";
-    i = nClass >> 7;
-    if ( ( i > 0 ) && ( i <= 500 ) )
-    {
-        i--;
-        pClass = String.fromCharCode( "A".charCodeAt() + i / 100 )[0];
-        i %= 100;
-        pClass += String.fromCharCode( "0".charCodeAt() + i / 10 )[0];
-        pClass += String.fromCharCode( "0".charCodeAt() + i % 10 )[0];
-        i = nClass & 127;
-        if ( i )
-        {
-            pClass += '/';
-            if ( i >= 100 )
-            {
-                pClass += '9';
-                pClass += '9';
-
-            } else
-            {
-                pClass += String.fromCharCode( "0".charCodeAt() + i / 10 )[0];
-                pClass += String.fromCharCode( "0".charCodeAt() + i % 10 )[0];
-
-            }
-        }
-    } else
-        pClass = "";
-    return pClass;
 }
