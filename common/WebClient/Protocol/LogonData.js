@@ -2,7 +2,6 @@
 // ES6 5.3.2020
 
 import { VersionCode, VersionCodeEnum } from "../VersionCode.js";
-// import { System } from "../../Tools/System.js";
 import { strUtil } from '../../Tools/Tools.js'
 import { Language } from "../../Tools/Language.js";
 import { WebSockMessage, SockMsgId } from "./WebSockMessage.js";

@@ -5,7 +5,6 @@ import { strUtil } from '../Tools/Tools.js'
 import { CBDate } from "../Tools/CBDate.js";
 import { Time } from '../Tools/Time.js'
 import {BinToString} from './BinToString.js'
-import { CBDebug } from "../Tools/Debug/debug_util.js";
 
 //// Constructor:
 export class DataBuffer
@@ -777,8 +776,10 @@ export class DataBuffer
    {
       var len = this.readInt32();
 
-      if ( len > 65534 )
+      if ( len > 65534 ) {
          CBDebug.assert( len < 65535 );
+         return;
+      }
 
       arr.length = len;
       for ( var inx = 0; inx < len; ++inx )

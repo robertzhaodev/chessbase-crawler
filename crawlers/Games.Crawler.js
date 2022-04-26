@@ -1,9 +1,10 @@
 import {Connection} from "../common/WebClient/Connection.js";
-import {LoginMode, LogonData} from "../common/WebClient/Protocol/LogonData.js";
+import {LogonData} from "../common/WebClient/Protocol/LogonData.js";
 import {CBGuid} from "../common/Tools/CBGuid.js";
 import {SockMsgId, WebSockMessage} from "../common/WebClient/Protocol/WebSockMessage.js";
 import {YourIdData} from "../common/WebClient/Protocol/YourId.js";
-import {GameHeader, GameResultEnum} from "../common/Chess/Logic/GameHeader.js";
+import {readGameHeader, readGameMoves} from "../helpers/functions.js";
+import {gameResultCodeToString} from "../helpers/ultils.js";
 import fs from 'fs';
 import path from "path"
 
@@ -25,7 +26,7 @@ export class GamesCrawler extends Connection {
         const loginData = new LogonData(
             "Guest",
             "Pass",
-            LoginMode.GUEST,
+            2, //LoginMode.GUEST,
             new CBGuid(),
         );
         const msg = loginData.getSocketsMsg(false);
@@ -157,7 +158,7 @@ export class GamesCrawler extends Connection {
     onReceivedGamesList(msg) {
 
         /**
-            Game list data struct =====
+            GameHeader list data struct =====
             - first 4 bytes: for count total items (n)
             - Loop n, with each:
                 - first 8 bytes: GameId number
@@ -178,10 +179,14 @@ export class GamesCrawler extends Connection {
         for (let n = 0; n < nRead; n++) {
             aDB.beginSizedRead();
             const nGameNo = aDB.readUint32();
+
             if (nGameNo > 0) {
-                const gameHeader = new GameHeader();
-                gameHeader.read(aDB)
-                gameList.push(gameHeader);
+                // read headers
+                const headers = readGameHeader(aDB)
+                // read moves
+                const moves = readGameMoves(aDB);
+
+                gameList.push({...headers, moves});
             }
             aDB.endSizedRead();
         }
@@ -194,13 +199,14 @@ export class GamesCrawler extends Connection {
                 subRound: g.subRound,
                 board: g.board,
                 eco: g.eco,
-                date: new Date(g.date.toString()),
-                result: GameResultEnum.toString(g.result),
+                date: g.date,
+                result: gameResultCodeToString(g.result),
                 event: g.event.event,
                 eloWhite: g.eloWh,
                 eloBlack: g.eloBl,
                 playCount: g.plyCount,
-                flags: g.flags
+                flags: g.flags,
+                moves: g.moves,
             };
         });
 

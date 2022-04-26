@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from "path"
 import {DataBuffer} from "./common/Container/DataBuffer.js";
-import {GameHeader, GameResultEnum} from "./common/Chess/Logic/GameHeader.js";
+import {readGameHeader, readGameMoves} from "./helpers/functions.js";
+import {gameResultCodeToString} from "./helpers/ultils.js";
+
 
 const fileContent = fs.readFileSync(`${path.resolve()}/data/sample-binary.txt`)
 
@@ -18,10 +20,14 @@ const gameList = [];
 for (let n = 0; n < nRead; n++) {
     aDB.beginSizedRead();
     const nGameNo = aDB.readUint32();
+
     if (nGameNo > 0) {
-        const gameHeader = new GameHeader();
-        gameHeader.read(aDB)
-        gameList.push(gameHeader);
+        // read headers
+        const headers = readGameHeader(aDB)
+        // read moves
+        const moves = readGameMoves(aDB);
+
+        gameList.push({...headers, moves});
     }
     aDB.endSizedRead();
 }
@@ -34,13 +40,14 @@ const simpleData = gameList.map((g) => {
         subRound: g.subRound,
         board: g.board,
         eco: g.eco,
-        date: new Date(g.date.toString()),
-        result: GameResultEnum.toString(g.result),
+        date: g.date,
+        result: gameResultCodeToString(g.result),
         event: g.event.event,
         eloWhite: g.eloWh,
         eloBlack: g.eloBl,
         playCount: g.plyCount,
-        flags: g.flags
+        flags: g.flags,
+        moves: g.moves,
     };
 });
 

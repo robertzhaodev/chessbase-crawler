@@ -1,8 +1,4 @@
 
-// ES6 5.3.2020
-
-import { System } from '../Tools/System.js'
-
 export var VersionCodeEnum =
 {
 	JSPLAYCHESS: 1101,
