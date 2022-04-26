@@ -2,147 +2,30 @@ import fs from 'fs';
 import path from "path"
 import {DataBuffer} from "./common/Container/DataBuffer.js";
 import {GameHeader, GameResultEnum} from "./common/Chess/Logic/GameHeader.js";
+import {WebSockMessage} from "./common/WebClient/Protocol/WebSockMessage.js";
 
 const fileContent = fs.readFileSync(`${path.resolve()}/data/sample-binary.txt`)
 // sample data
-const aDB = new DataBuffer();
-aDB.buffer = fileContent.buffer;
-aDB.setSize(49604);
-aDB.viewBuf = new DataView(fileContent.buffer)
+// const aDB = new DataBuffer();
+// aDB.buffer = fileContent.buffer;
+// aDB.setSize(49604);
+// aDB.viewBuf = new DataView(fileContent.buffer)
 
-function bufferToHex (buffer) {
-    return [...new Uint8Array (buffer)]
-        .map (b => b.toString (16).padStart (2, "0"))
-        .join ("");
-}
+const message = "G1oAAAAAAAAAAAAAAAAAAfIAAAACAAAATQQFAAUAAABTAAAAAAAAAAAAAAAFAAAAR3Vlc3QEAAAAUGFzcxuJguzrx64SH81lKITzkykFAAAAdmktVk4MAAAATGludXggeDg2XzY05AQAAAAAAAAAAAAAAAAAAAAAAACAAAAAYQAAADUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS85Mi4wLjQ1MTUuMTU5IFNhZmFyaS81MzcuMzYfAAAAaHR0cHM6Ly9kYXRhYmFzZS5jaGVzc2Jhc2UuY29tLw=="
 
-// console.log(bufferToHex(fileContent.buffer));
+const buffer = Buffer.from(message, 'base64').buffer;
 
+const view = new DataView(buffer);
+const aDb = new DataBuffer();
 
-const nRead = aDB.readUint32();
+aDb.readFromDataView(view, 0);
 
-// progress
-const gameList = [];
-for (let n = 0; n < nRead; n++) {
-    aDB.beginSizedRead();
-    const nGameNo = aDB.readUint32();
-    if (nGameNo > 0) {
-        const gameHeader = new GameHeader();
-        gameHeader.read(aDB)
-        gameList.push(gameHeader);
+const nMode = aDb.readInt32( 0);
+const nMode = aDb.readInt32( 0);
 
+// const nVal = view.getInt32( 2 );
+// const idSender = view.getInt32( 6 );
+// const userType = view.getInt16( 10 );
+// const idReceiver = view.getInt32( 12 );
 
-        // // start pos
-        // readPos();
-        //
-        // readAnotation();
-
-        // //start anno...
-        // var anno = new Annotation();
-        // anno.read( _buf );
-        // //		Annotation.readFactory( _buf );
-        // Game._readMoves.call( this, _buf );
-    }
-    aDB.endSizedRead();
-}
-
-const simpleData = gameList.map((g) => {
-    return {
-        black: `${g.black.first} ${g.black.last}`,
-        white: `${g.white.first} ${g.white.last}`,
-        round: g.round,
-        subRound: g.subRound,
-        board: g.board,
-        eco: g.eco,
-        date: new Date(g.date.toString()),
-        result: GameResultEnum.toString(g.result),
-        event: g.event.event,
-        eloWhite: g.eloWh,
-        eloBlack: g.eloBl,
-        playCount: g.plyCount,
-        flags: g.flags
-    };
-});
-
-const folder = `${path.resolve()}/data`;
-const fileName = `${folder}/games-list-sample.json`;
-
-fs.mkdirSync(folder, {recursive: true});
-fs.writeFileSync(fileName, JSON.stringify(simpleData, null, '\t'));
-
-console.log('File saved at: ' + fileName);
-
-process.exit(0);
-
-//
-// function readPos() {
-//     let normalInit = aDB.readBool();
-//     // if ( !normalInit )
-//     // {
-//     //     // Read start position
-//     //     const board = aDB.readByteArray( Board.SIZE );
-//     //     const sd = aDB.readInt();
-//     //     const ep = aDB.readByte() - 1;
-//     //     const cr = aDB.readByte();
-//     //
-//     //     console.log(board, sd, ep, cr)
-//     //     // end read start
-//     //
-//     //
-//     //     // read anotation
-//     //     var cntAnnos = aDB.readShort();
-//     //     for ( var inx = 0; inx < cntAnnos; ++inx )
-//     //     {
-//     //         /*var annoLen = */aDB.readShort();
-//     //
-//     //         var hdr = AnnoRec.readHeader( _buf );
-//     //
-//     //         // CBDebug.assert( hdr.len === annoLen, "LEN OK" );
-//     //
-//     //         hdr.len -= AnnoRec.ANNO_HEAD_SIZE;
-//     //
-//     //         var anno = AnnoFactory.factory( hdr.type );
-//     //
-//     //         if ( !anno )
-//     //         {
-//     //             aDB.skip( hdr.len );
-//     //             continue;
-//     //         }
-//     //         anno.read( hdr.len, _buf );
-//     //     }
-//     //
-//     //     aDB.readShort();
-//     //     const numMv = aDB.readShort();
-//     //     normalInit = aDB.readBool();
-//     //     console.log(numMv, normalInit)
-//     // }
-// }
-//
-// function readAnotation() {
-//     var _cntAnnos = aDB.readShort();
-//     for ( var inx = 0; inx < _cntAnnos; ++inx )
-//     {
-//         var annoLen = aDB.readShort();
-//         const inxMv = aDB.readBEInt24();
-//         const type = aDB.readByte();
-//         const len = aDB.readBEInt16();
-//
-//         console.log(annoLen, inxMv, type, len)
-//         // var hdr = AnnoRec.readHeader( aDB );
-//
-//         //
-//         // // CBDebug.assert( hdr.len === annoLen, "LEN OK" );
-//         //
-//         // hdr.len -= AnnoRec.ANNO_HEAD_SIZE;
-//         //
-//         // var anno = AnnoFactory.factory( hdr.type );
-//         //
-//         // if ( !anno )
-//         // {
-//         //     aDB.skip( hdr.len );
-//         //     continue;
-//         // }
-//         //
-//         // anno.read( hdr.len, aDB );
-//     }
-// }
+console.log(nMode);

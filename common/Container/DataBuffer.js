@@ -904,7 +904,7 @@ export class DataBuffer
          throw new Error( "DataBuffer Size Limit exc." );
       }
    }
-
+bufSwap
    // All numbers are little endian in C++ DataBuffer:
    _swapBytes( view, nStart, nLen )
    {
