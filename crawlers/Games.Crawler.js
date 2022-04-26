@@ -127,7 +127,7 @@ export class GamesCrawler extends Connection {
         const nGames = dbGameMsg.readUint32();
         const nTotalFound = dbGameMsg.readUint32();
 
-        console.log(`Fetching ${nGames}/${nTotalFound}`);
+        console.log(`Fetching ${nGames}/${nTotalFound} games from given ids..`);
 
         const gameIds = [];
         for (let i = 0; i < nGames; i++) {
@@ -140,7 +140,6 @@ export class GamesCrawler extends Connection {
         }
 
         // Request get games
-        console.log('Fetching games from given ids...');
         const getGamesMsg = new WebSockMessage(SockMsgId.REQUEST_ONLINE_DB_GAMES);
         getGamesMsg.setVal(2);
         getGamesMsg.buf.writeUint32(gameIds.length);
@@ -191,13 +190,13 @@ export class GamesCrawler extends Connection {
             };
         });
 
-        const folder = `${path.resolve()}/Data`;
+        const folder = `${path.resolve()}/data`;
         const fileName = `${folder}/games-list.json`;
 
         fs.mkdirSync(folder, {recursive: true});
-        fs.writeFileSync(`${folder}/games-list.json`, JSON.stringify(simpleData, null, '\t'));
+        fs.writeFileSync(fileName, JSON.stringify(simpleData, null, '\t'));
 
-        console.log('File saved at : ' + fileName);
+        console.log('File saved at: ' + fileName);
 
         process.exit(0);
     }

@@ -164,7 +164,7 @@ export class DataBuffer
          this.nPos += nLen;
       }
       else
-         throw ( new Error( "Data Error: Read Strings" ) );
+         throw ( new Error( "data Error: Read Strings" ) );
 
       return strUnicode;
    };
@@ -195,7 +195,7 @@ export class DataBuffer
          this.nPos += nLen;
       }
       else
-         throw ( new Error( String.f( "Data Error: Read Strings, Len={0}, maxLen={1}", nLen, nMaxLen ) ) );
+         throw ( new Error( String.f( "data Error: Read Strings, Len={0}, maxLen={1}", nLen, nMaxLen ) ) );
 
       return strASCII;
    };
@@ -231,11 +231,11 @@ export class DataBuffer
             this.nPos += nLen + 1;
          else
          {
-            throw ( new Error( String.f( "Data Error: Read ByteLenString, len={0}, maxLen={1}", nLen, nMaxLen ) ) );
+            throw ( new Error( String.f( "data Error: Read ByteLenString, len={0}, maxLen={1}", nLen, nMaxLen ) ) );
          }
       }
       else
-         throw ( new Error( String.f( "Data Error: Read ByteLenString > 1000, len={0}", nLen ) ) );
+         throw ( new Error( String.f( "data Error: Read ByteLenString > 1000, len={0}", nLen ) ) );
 
       return strASCII;
    };
@@ -254,7 +254,7 @@ export class DataBuffer
          this.nPos += len;
       }
       else
-         throw ( new Error( "Data Error: Read SizedString, max=" + len ) );
+         throw ( new Error( "data Error: Read SizedString, max=" + len ) );
 
       return strASCII;
    };
@@ -290,7 +290,7 @@ export class DataBuffer
          this.nPos += len;
       }
       else
-         throw ( new Error( "Data Error: Read UTF8String, len=" + len ) );
+         throw ( new Error( "data Error: Read UTF8String, len=" + len ) );
 
       return strUnicode;
 

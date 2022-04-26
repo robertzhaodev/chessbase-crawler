@@ -1,4 +1,4 @@
-import {GamesCrawler} from "./Crawlers/Games.Crawler.js";
+import {GamesCrawler} from "./crawlers/Games.Crawler.js";
 
 // craw list games
 GamesCrawler.start('wss://dbserver.chessbase.com/');
