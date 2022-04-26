@@ -170,6 +170,9 @@ export class GamesCrawler extends Connection {
         const aDB = msg.getBuf();
         const nRead = aDB.readUint32();
 
+        // console.log(Buffer.from(aDB.buffer));
+        // fs.writeFileSync(`${path.resolve()}/data/sample-binary.txt`, Buffer.from(aDB.buffer));
+
         const gameList = [];
 
         for (let n = 0; n < nRead; n++) {
@@ -178,8 +181,6 @@ export class GamesCrawler extends Connection {
             if (nGameNo > 0) {
                 const gameHeader = new GameHeader();
                 gameHeader.read(aDB)
-
-
                 gameList.push(gameHeader);
             }
             aDB.endSizedRead();
