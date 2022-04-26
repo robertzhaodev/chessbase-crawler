@@ -275,7 +275,7 @@ export class WebSockMessage
          this.userType = view.getInt16( 10 );
          this.idReceiver = view.getInt32( 12 );
 
-         //Log.Log("Received: Type: " + this.type + ", Val: " + this.nVal + ", usrType: " + this.userType + " idrec: " + this.idReceiver);
+         console.log("Received: Type: " + this.type + ", Val: " + this.nVal + ", usrType: " + this.userType + " idrec: " + this.idReceiver);
 
          if ( arrBuf.byteLength >= 20 )
          {

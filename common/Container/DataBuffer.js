@@ -231,7 +231,7 @@ export class DataBuffer
             this.nPos += nLen + 1;
          else
          {
-            throw ( new Error( String.f( "data Error: Read ByteLenString, len={0}, maxLen={1}", nLen, nMaxLen ) ) );
+            throw ( new Error(`data Error: Read ByteLenString, len=${nLen}, maxLen=${nMaxLen}`) );
          }
       }
       else
@@ -914,6 +914,10 @@ export class DataBuffer
 
       for ( let i = 0; i < nLen; i++ )
          view.setUint8( nStart + i, bufSwap[ nLen - i - 1 ] );
+   }
+
+   toStringDebug() {
+      return `s=${this.getSize()}, p=${this.getPos()}, nMaskSize=${this.nMarkedSize}, nSizeMarker=${this.nSizeMarker}`
    }
 
 }

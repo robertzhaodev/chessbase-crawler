@@ -155,6 +155,18 @@ export class GamesCrawler extends Connection {
      * @param msg
      */
     onReceivedGamesList(msg) {
+
+        /**
+            Game list data struct =====
+            - first 4 bytes: for count total items (n)
+            - Loop n, with each:
+                - first 8 bytes: GameId number
+                - next 8 bytes: White LastName
+                - next 8 bytes: White FirstName
+                - next 8 bytes: Black LastName
+                - next 8 bytes: Black FirstName
+        */
+
         const aDB = msg.getBuf();
         const nRead = aDB.readUint32();
 
@@ -166,6 +178,8 @@ export class GamesCrawler extends Connection {
             if (nGameNo > 0) {
                 const gameHeader = new GameHeader();
                 gameHeader.read(aDB)
+
+
                 gameList.push(gameHeader);
             }
             aDB.endSizedRead();
